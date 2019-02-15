@@ -543,7 +543,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Ubuntu', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: 'Ubuntu Mono', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 code {
   overflow-wrap: break-word;
@@ -1891,7 +1891,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6edd4f;
+  background: #ff5714;
 }
 .links-of-blogroll {
   font-size: 13px;
