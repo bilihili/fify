@@ -422,6 +422,19 @@ var _hmt = _hmt || [];
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/16/Git-learn-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/16/Git-learn-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -516,6 +529,10 @@ var _hmt = _hmt || [];
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -766,6 +783,35 @@ var _hmt = _hmt || [];
 
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'yOdq4V6nnsI8bRNJDOb3TrS1-gzGzoHsz',
+    appKey: 'wL09HwmzpWxJQuaLOrEoySfw',
+    placeholder: '',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   
