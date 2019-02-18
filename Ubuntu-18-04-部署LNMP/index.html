@@ -147,25 +147,28 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="description" content="Git 基本使用安装 Git 后我们需要配置 Git, 桌面上单击右键，可以看见一行：Git bash here首先我们设置自己的用户名已经邮件地址，每次 Git 的提交都会使用这些信息，并且会写入每次提交当中。$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email name@gmail.com 使用">
+  <meta name="description" content="什么是LNMP四个英文单词的缩写Linux nginx mysql php 第一步安装Nginx安装Nginx需要Ubuntu的sudo权限。$ sudo apt update$ sudo apt install nginx 成功之后打开浏览器输入你的IP地址访问一般你会看见下面的图片 第二步安装Mysql$ sudo apt install mysql-server 成功以后$ sudo mys">
 <meta name="keywords" content="学习 git python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开始学习Git的操作">
-<meta property="og:url" content="https://fify.me/2019/02/17/Git-learn-3/index.html">
+<meta property="og:title" content="Ubuntu 18.04 部署LNMP">
+<meta property="og:url" content="https://fify.me/Ubuntu-18-04-部署LNMP/index.html">
 <meta property="og:site_name" content="浮躁狗">
-<meta property="og:description" content="Git 基本使用安装 Git 后我们需要配置 Git, 桌面上单击右键，可以看见一行：Git bash here首先我们设置自己的用户名已经邮件地址，每次 Git 的提交都会使用这些信息，并且会写入每次提交当中。$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email name@gmail.com 使用">
+<meta property="og:description" content="什么是LNMP四个英文单词的缩写Linux nginx mysql php 第一步安装Nginx安装Nginx需要Ubuntu的sudo权限。$ sudo apt update$ sudo apt install nginx 成功之后打开浏览器输入你的IP地址访问一般你会看见下面的图片 第二步安装Mysql$ sudo apt install mysql-server 成功以后$ sudo mys">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-17T12:47:19.694Z">
+<meta property="og:image" content="https://assets.digitalocean.com/articles/lemp_ubuntu_1604/nginx_default.png">
+<meta property="og:image" content="https://assets.digitalocean.com/lemp_ubuntu_1804/php_info_1804.png">
+<meta property="og:updated_time" content="2019-02-16T10:55:58.718Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开始学习Git的操作">
-<meta name="twitter:description" content="Git 基本使用安装 Git 后我们需要配置 Git, 桌面上单击右键，可以看见一行：Git bash here首先我们设置自己的用户名已经邮件地址，每次 Git 的提交都会使用这些信息，并且会写入每次提交当中。$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email name@gmail.com 使用">
+<meta name="twitter:title" content="Ubuntu 18.04 部署LNMP">
+<meta name="twitter:description" content="什么是LNMP四个英文单词的缩写Linux nginx mysql php 第一步安装Nginx安装Nginx需要Ubuntu的sudo权限。$ sudo apt update$ sudo apt install nginx 成功之后打开浏览器输入你的IP地址访问一般你会看见下面的图片 第二步安装Mysql$ sudo apt install mysql-server 成功以后$ sudo mys">
+<meta name="twitter:image" content="https://assets.digitalocean.com/articles/lemp_ubuntu_1604/nginx_default.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fify.me/2019/02/17/Git-learn-3/">
+  <link rel="canonical" href="https://fify.me/Ubuntu-18-04-部署LNMP/">
 
 
 
@@ -175,7 +178,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-  <title>开始学习Git的操作 | 浮躁狗</title>
+  <title>Ubuntu 18.04 部署LNMP | 浮躁狗</title>
   
 
 
@@ -344,7 +347,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/17/Git-learn-3/">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/Ubuntu-18-04-部署LNMP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浮躁狗">
@@ -361,7 +364,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h2 class="post-title" itemprop="name headline">开始学习Git的操作
+          <h2 class="post-title" itemprop="name headline">Ubuntu 18.04 部署LNMP
 
               
             
@@ -387,7 +390,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-02-17 20:17:51 / Modified: 20:47:19" itemprop="dateCreated datePublished" datetime="2019-02-17T20:17:51+08:00">2019-02-17</time>
+              <time title="Created: 2019-02-16 18:22:22 / Modified: 18:55:58" itemprop="dateCreated datePublished" datetime="2019-02-16T18:22:22+08:00">2019-02-16</time>
             
 
             
@@ -409,7 +412,7 @@ var _hmt = _hmt || [];
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
 
                 
                 
@@ -428,8 +431,8 @@ var _hmt = _hmt || [];
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/17/Git-learn-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/17/Git-learn-3/" itemprop="commentCount"></span>
+                <a href="/Ubuntu-18-04-部署LNMP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Ubuntu-18-04-部署LNMP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,13 +460,27 @@ var _hmt = _hmt || [];
       
 
       
-        <h3 id="Git-基本使用"><a href="#Git-基本使用" class="headerlink" title="Git 基本使用"></a>Git 基本使用</h3><p>安装 Git 后我们需要配置 Git, 桌面上单击右键，可以看见一行：Git bash here<br>首先我们设置自己的用户名已经邮件地址，每次 Git 的提交都会使用这些信息，并且会写入每次提交当中。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"Your Name"</span></span><br><span class="line">$ git config --global user.email name@gmail.com</span><br></pre></td></tr></table></figure></p>
-<p>使用 –global 就不需要每次重新开启新项目时，再次配置。<br>使用 git config –list 列出 Git 的所有配置。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">core.symlinks=<span class="literal">true</span></span><br><span class="line">core.autocrlf=<span class="literal">true</span></span><br><span class="line">core.fscache=<span class="literal">true</span></span><br><span class="line">color.diff=auto</span><br><span class="line">color.status=auto</span><br><span class="line">color.branch=auto</span><br><span class="line">color.interactive=<span class="literal">true</span></span><br><span class="line">help.format=html</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h3 id="获取-Git-仓库"><a href="#获取-Git-仓库" class="headerlink" title="获取 Git 仓库"></a>获取 Git 仓库</h3><p>获取 Git 仓库后就可以对你想进行的项目进行管理<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>该命令会创建 .git 的子目录，但创建它之后你并没有对文件进行跟踪，显然，不进行跟踪意味着git并不能控制它，如果要进行跟踪需要使用 git add 文件名 进行跟踪，跟踪之后执行 git commit 提交<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add *.c</span><br><span class="line">$ git add LICENSE</span><br><span class="line">$ git commit -m <span class="string">'对当前文件夹下的c源代码进行跟踪'</span></span><br></pre></td></tr></table></figure></p>
-<p>获取仓库的另外一种办法是，克隆别人的。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://www.github.com/bilihili/poem</span><br></pre></td></tr></table></figure></p>
-<p>默认文件名为poem<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://www.github.com/bilihili/poem libai</span><br></pre></td></tr></table></figure></p>
-<p>将poem改为libai</p>
+        <h3 id="什么是LNMP"><a href="#什么是LNMP" class="headerlink" title="什么是LNMP"></a>什么是LNMP</h3><p>四个英文单词的缩写Linux nginx mysql php</p>
+<h3 id="第一步安装Nginx"><a href="#第一步安装Nginx" class="headerlink" title="第一步安装Nginx"></a>第一步安装Nginx</h3><p>安装Nginx需要Ubuntu的sudo权限。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install nginx</span><br></pre></td></tr></table></figure></p>
+<p>成功之后打开浏览器输入你的IP地址访问一般你会看见下面的图片<br><img src="https://assets.digitalocean.com/articles/lemp_ubuntu_1604/nginx_default.png" alt="nginx"></p>
+<h3 id="第二步安装Mysql"><a href="#第二步安装Mysql" class="headerlink" title="第二步安装Mysql"></a>第二步安装Mysql</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
+<p>成功以后<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
+<p>根据提示输入密码<br>成功以后<br>修改密码验证方式，如果使用默认的，不能用你刚才输入的密码登录<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo mysql</span><br><span class="line">mysql&gt; SELECT user,authentication_string,plugin,host FROM mysql.user;</span><br></pre></td></tr></table></figure></p>
+<p>你会看见root一行验证方式为auth_socket<br>修改它，并设置为自己的密码<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>刷新设置<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p>检查是否成功<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; SELECT user,authentication_string,plugin,host FROM mysql.user;</span><br></pre></td></tr></table></figure></p>
+<p>退出<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">msyql&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
+<p>注意以后登录mysql必须用<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<h3 id="第三步安装php以及配置nginx"><a href="#第三步安装php以及配置nginx" class="headerlink" title="第三步安装php以及配置nginx"></a>第三步安装php以及配置nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository universe</span><br><span class="line">$ sudo apt install php-fpm php-mysql</span><br></pre></td></tr></table></figure>
+<p>成功之后配置nginx<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano /etc/nginx/sites-available/example.com</span><br></pre></td></tr></table></figure></p>
+<p>(example.com可以任意取名)<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        root /var/www/html;</span><br><span class="line">        index index.php index.html index.htm index.nginx-debian.html;</span><br><span class="line">        server_name example.com;(改为自己的)</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">                include snippets/fastcgi-php.conf;</span><br><span class="line">                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ /\.ht &#123;</span><br><span class="line">                deny all;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>软链接<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/</span><br></pre></td></tr></table></figure></p>
+<p>取消default软链接<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo unlink /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure></p>
+<p>检查刚才的配置文件语法<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nginx -t</span><br></pre></td></tr></table></figure></p>
+<p>重启nginx生效<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>检查php是否成功运行<br>在/var/www/html下创建一个文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim index.php</span><br></pre></td></tr></table></figure></p>
+<p>文件内容:<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">phpinfo();</span><br></pre></td></tr></table></figure></p>
+<p>再次进入刚才的网站<br>你如果看见如下图片便说明安装成功<br><img src="https://assets.digitalocean.com/lemp_ubuntu_1804/php_info_1804.png" alt="phpinfo"><br>删除刚才的文件。以后会写https的配置。</p>
 
       
     </div>
@@ -494,8 +511,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/16/Git-learn-2/" rel="next" title="Git入门学习-Git基础">
-                <i class="fa fa-chevron-left"></i> Git入门学习-Git基础
+              <a href="/Git入门学习/" rel="next" title="Git入门学习-介绍与安装">
+                <i class="fa fa-chevron-left"></i> Git入门学习-介绍与安装
               </a>
             
           </div>
@@ -504,8 +521,8 @@ var _hmt = _hmt || [];
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/17/let-ssl-support-your-website/" rel="prev" title="免费让网站(nginx)支持https">
-                免费让网站(nginx)支持https <i class="fa fa-chevron-right"></i>
+              <a href="/Git-learn-2/" rel="prev" title="Git入门学习-Git基础">
+                Git入门学习-Git基础 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,7 +654,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-基本使用"><span class="nav-number">1.</span> <span class="nav-text">Git 基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取-Git-仓库"><span class="nav-number">2.</span> <span class="nav-text">获取 Git 仓库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是LNMP"><span class="nav-number">1.</span> <span class="nav-text">什么是LNMP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步安装Nginx"><span class="nav-number">2.</span> <span class="nav-text">第一步安装Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步安装Mysql"><span class="nav-number">3.</span> <span class="nav-text">第二步安装Mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步安装php以及配置nginx"><span class="nav-number">4.</span> <span class="nav-text">第三步安装php以及配置nginx</span></a></li></ol></div>
             
 
           </div>

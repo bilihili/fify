@@ -147,25 +147,25 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+  <meta name="description" content="支持https的条件为：拥有一个域名,而且要做对应的DNS解析操作系统:Ubuntu 18.04命令为$ sudo add-apt-repository ppa:certbot/certbot$ sudo apt install python-certbot-nginx$ sudo nano /etc/nginx/sites-available/example.com 修改文件中的server_n">
 <meta name="keywords" content="学习 git python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网站开发">
-<meta property="og:url" content="https://fify.me/2019/02/18/website-design/index.html">
+<meta property="og:title" content="免费让网站(nginx)支持https">
+<meta property="og:url" content="https://fify.me/let-ssl-support-your-website/index.html">
 <meta property="og:site_name" content="浮躁狗">
-<meta property="og:description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+<meta property="og:description" content="支持https的条件为：拥有一个域名,而且要做对应的DNS解析操作系统:Ubuntu 18.04命令为$ sudo add-apt-repository ppa:certbot/certbot$ sudo apt install python-certbot-nginx$ sudo nano /etc/nginx/sites-available/example.com 修改文件中的server_n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T11:52:58.782Z">
+<meta property="og:updated_time" content="2019-02-17T13:01:12.112Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网站开发">
-<meta name="twitter:description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+<meta name="twitter:title" content="免费让网站(nginx)支持https">
+<meta name="twitter:description" content="支持https的条件为：拥有一个域名,而且要做对应的DNS解析操作系统:Ubuntu 18.04命令为$ sudo add-apt-repository ppa:certbot/certbot$ sudo apt install python-certbot-nginx$ sudo nano /etc/nginx/sites-available/example.com 修改文件中的server_n">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fify.me/2019/02/18/website-design/">
+  <link rel="canonical" href="https://fify.me/let-ssl-support-your-website/">
 
 
 
@@ -175,7 +175,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-  <title>网站开发 | 浮躁狗</title>
+  <title>免费让网站(nginx)支持https | 浮躁狗</title>
   
 
 
@@ -344,7 +344,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/18/website-design/">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/let-ssl-support-your-website/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浮躁狗">
@@ -361,7 +361,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h2 class="post-title" itemprop="name headline">网站开发
+          <h2 class="post-title" itemprop="name headline">免费让网站(nginx)支持https
 
               
             
@@ -387,7 +387,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-02-18 18:42:08 / Modified: 19:52:58" itemprop="dateCreated datePublished" datetime="2019-02-18T18:42:08+08:00">2019-02-18</time>
+              <time title="Created: 2019-02-17 20:49:21 / Modified: 21:01:12" itemprop="dateCreated datePublished" datetime="2019-02-17T20:49:21+08:00">2019-02-17</time>
             
 
             
@@ -409,7 +409,7 @@ var _hmt = _hmt || [];
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mywebsite/" itemprop="url" rel="index"><span itemprop="name">mywebsite</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
 
                 
                 
@@ -428,8 +428,8 @@ var _hmt = _hmt || [];
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/18/website-design/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/18/website-design/" itemprop="commentCount"></span>
+                <a href="/let-ssl-support-your-website/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/let-ssl-support-your-website/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,10 +457,11 @@ var _hmt = _hmt || [];
       
 
       
-        <h3 id="如何同步代码"><a href="#如何同步代码" class="headerlink" title="如何同步代码"></a>如何同步代码</h3><p>感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。<br>因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。<br><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">.idea</span><br><span class="line">__pycache__</span><br><span class="line">db.sqlite3</span><br><span class="line">media<span class="regexp">/avatar/</span>*</span><br><span class="line">!media<span class="regexp">/avatar/</span>avatar.png</span><br><span class="line">media<span class="regexp">/images/</span>*</span><br><span class="line">media<span class="regexp">/temp/</span>*</span><br></pre></td></tr></table></figure></p>
-<p>需要保存默认的avatar以及migrations文件,其他图片不保存，顺便吐槽一下千牛，他的存储方案需要备案的域名。亚马逊的aws s3可以不用，但是昨天试了一试发现不能上传文件，而且告知我没有修改它的权限，可能是我不会设置的原因。<br>接下来是 Git 的原因，当我在服务器是pull时他告知我，我修改了服务器上的文件，需要我自己手动 merge，merge 是不可能 merge 的，所以我用了这个命令。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error: Your <span class="built_in">local</span> changes to the following files would be overwritten by merge:</span><br><span class="line">        home/templates/home/moments.html</span><br><span class="line">        user/templates/user/user.html</span><br><span class="line">        user/views.py</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line"></span><br><span class="line">$ git reset --hard</span><br></pre></td></tr></table></figure></p>
-<p>因为不存在文件丢失的问题，所以我就不 stash them 了。</p>
-<h3 id="图片如何保存"><a href="#图片如何保存" class="headerlink" title="图片如何保存"></a>图片如何保存</h3><p>听说instagram使用的也是 aws s3 的方案。但是目前我还是存储在服务器上，大不了崩了重新搭建一次。</p>
+        <p>支持https的条件为：拥有一个域名,而且要做对应的DNS解析<br>操作系统:Ubuntu 18.04<br>命令为<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:certbot/certbot</span><br><span class="line">$ sudo apt install python-certbot-nginx</span><br><span class="line">$ sudo nano /etc/nginx/sites-available/example.com</span><br></pre></td></tr></table></figure></p>
+<p>修改文件中的server_name <a href="http://www.example.com" target="_blank" rel="noopener">www.example.com</a> example.com<br>重启nginx<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nginx -t</span><br><span class="line">$ nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>获取ssl证书<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo certbot --nginx -d example.com -d www.example.com</span><br></pre></td></tr></table></figure></p>
+<p>修改 example为自己的域名,成功之后会询问你是否由http重定向到https,一般选确定。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo certbot renew --dry-run</span><br></pre></td></tr></table></figure></p>
+<p>该命令可以让https自动更新。</p>
 
       
     </div>
@@ -491,8 +492,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/17/let-ssl-support-your-website/" rel="next" title="免费让网站(nginx)支持https">
-                <i class="fa fa-chevron-left"></i> 免费让网站(nginx)支持https
+              <a href="/Git-learn-3/" rel="next" title="开始学习Git的操作">
+                <i class="fa fa-chevron-left"></i> 开始学习Git的操作
               </a>
             
           </div>
@@ -500,6 +501,10 @@ var _hmt = _hmt || [];
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/website-design/" rel="prev" title="网站开发">
+                网站开发 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -548,17 +553,8 @@ var _hmt = _hmt || [];
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -619,23 +615,6 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何同步代码"><span class="nav-number">1.</span> <span class="nav-text">如何同步代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片如何保存"><span class="nav-number">2.</span> <span class="nav-text">图片如何保存</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
