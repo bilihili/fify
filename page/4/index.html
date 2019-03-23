@@ -366,7 +366,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/16/Ubuntu-18-04-部署LNMP/">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/16/Git-learn-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浮躁狗">
@@ -386,7 +386,7 @@ var _hmt = _hmt || [];
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/16/Ubuntu-18-04-部署LNMP/" class="post-title-link" itemprop="url">Ubuntu 18.04 部署LNMP</a>
+                <a href="/2019/02/16/Git-learn-2/" class="post-title-link" itemprop="url">Git入门学习-Git基础</a>
               
             
           </h2>
@@ -411,12 +411,224 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-02-16 18:22:22 / Modified: 18:55:58" itemprop="dateCreated datePublished" datetime="2019-02-16T18:22:22+08:00">2019-02-16</time>
+              <time title="Created: 2019-02-16 21:40:10" itemprop="dateCreated datePublished" datetime="2019-02-16T21:40:10+08:00">2019-02-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-02-17 20:17:00" itemprop="dateModified" datetime="2019-02-17T20:17:00+08:00">2019-02-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/16/Git-learn-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/16/Git-learn-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="理解Git"><a href="#理解Git" class="headerlink" title="理解Git"></a>理解Git</h3><p>学习 Git 最重要的一步是理解它的思想和工作原理，那么学习就会更加方便。<br>Git 像是把数据看作是对小型文件系统的一组快照。 每次你提交更新，或在 Git 中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。 为了高效，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git 对待数据更像是一个 快照流。<br><img src="https://git-scm.com/book/en/v2/images/deltas.png" alt="快照"></p>
+<h3 id="几乎所有操作都可以在本地进行"><a href="#几乎所有操作都可以在本地进行" class="headerlink" title="几乎所有操作都可以在本地进行"></a>几乎所有操作都可以在本地进行</h3><p>在 Git 中的绝大多数操作都只需要访问本地文件和资源，一般不需要来自网络上其它计算机的信息。 如果你习惯于所有操作都有网络延时开销的集中式版本控制系统，Git 在这方面会让你感到速度之神赐给了 Git 超凡的能量。 因为你在本地磁盘上就有项目的完整历史，所以大部分操作看起来瞬间完成。</p>
+<p>举个例子，要浏览项目的历史，Git 不需外连到服务器去获取历史，然后再显示出来——它只需直接从本地数据库中读取。 你能立即看到项目历史。 如果你想查看当前版本与一个月前的版本之间引入的修改，Git 会查找到一个月前的文件做一次本地的差异计算，而不是由远程服务器处理或从远程服务器拉回旧版本文件再来本地处理。</p>
+<p>这也意味着你离线或者没有 VPN 时，几乎可以进行任何操作。 如你在飞机或火车上想做些工作，你能愉快地提交，直到有网络连接时再上传。 如你回家后 VPN 客户端不正常，你仍能工作。 使用其它系统，做到如此是不可能或很费力的。 比如，用 Perforce，你没有连接服务器时几乎不能做什么事；用 Subversion 和 CVS，你能修改文件，但不能向数据库提交修改（因为你的本地数据库离线了）。 这看起来不是大问题，但是你可能会惊喜地发现它带来的巨大的不同。</p>
+<h3 id="Git-的三种状态"><a href="#Git-的三种状态" class="headerlink" title="Git 的三种状态"></a>Git 的三种状态</h3><p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt="status"><br>你的文件可能处于这三种状态的一种，已提交(commited)，<br>已修改(modified)和已暂存(staged)。<br>已提交表示数据已经安全的保存在本地数据库中。 已修改表示修改了文件，但还没保存到数据库中。 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。<br>由此引入 Git 项目的三个工作区域的概念：Git 仓库(.git directory)、工作目录(working directory)以及暂存区域(staging area)。<br>Git 仓库目录是 Git 用来保存项目的元数据和对象数据库的地方。 这是 Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。</p>
+<p>工作目录是对项目的某个版本独立提取出来的内容。 这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。</p>
+<p>暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在 Git 仓库目录中。 有时候也被称作”索引”，不过一般说法还是叫暂存区域。<br>基本的 Git 工作流程如下:   </p>
+<p>1.在工作目录中修改文件。   </p>
+<p>2.暂存文件，将文件的快照放入暂存区域。</p>
+<p>3.提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。</p>
+<p>原文链接:<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-Git-%E5%9F%BA%E7%A1%80" target="_blank" rel="noopener">点这里</a></p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/16/Ubuntu-18-04-部署LNMP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/16/Ubuntu-18-04-部署LNMP/" class="post-title-link" itemprop="url">Ubuntu 18.04 部署LNMP(LEMP)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-16 18:22:22" itemprop="dateCreated datePublished" datetime="2019-02-16T18:22:22+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-23 20:04:20" itemprop="dateModified" datetime="2019-03-23T20:04:20+08:00">2019-03-23</time>
               
             
           </span>
@@ -782,7 +994,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

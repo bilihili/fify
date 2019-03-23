@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fify.me/2019/03/23/return-array-from-c/</loc>
+    
+    <lastmod>2019-03-23T12:27:37.598Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fify.me/2019/02/16/Ubuntu-18-04-%E9%83%A8%E7%BD%B2LNMP/</loc>
+    
+    <lastmod>2019-03-23T12:04:20.521Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fify.me/2019/03/22/using-free-aws-ec2/</loc>
     
     <lastmod>2019-03-22T07:40:39.907Z</lastmod>
@@ -68,13 +82,6 @@
     <loc>https://fify.me/2019/02/16/Git-learn-2/</loc>
     
     <lastmod>2019-02-17T12:17:00.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://fify.me/2019/02/16/Ubuntu-18-04-%E9%83%A8%E7%BD%B2LNMP/</loc>
-    
-    <lastmod>2019-02-16T10:55:58.718Z</lastmod>
     
   </url>
   
