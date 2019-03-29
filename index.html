@@ -366,6 +366,192 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/29/flarum-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/29/flarum-install/" class="post-title-link" itemprop="url">安装 Flarum 论坛详细过程</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-29 17:06:28 / Modified: 17:27:08" itemprop="dateCreated datePublished" datetime="2019-03-29T17:06:28+08:00">2019-03-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/03/29/flarum-install/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/29/flarum-install/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Flarum， 是一款界面简约好看的论坛软件，用php编写。<br>使用 flarum 需要 LNMP， 以及 composer</p>
+<h3 id="安装-composer"><a href="#安装-composer" class="headerlink" title="安装 composer"></a>安装 composer</h3><p>使用 Ubuntu 系统, Ubuntu 18.04 配置 LNMP 点<a href="https://fify.me/2019/02/16/Ubuntu-18-04-%E9%83%A8%E7%BD%B2LNMP/">这里</a><br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install composer</span><br></pre></td></tr></table></figure></p>
+<p>其他系统<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php -r <span class="string">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span></span><br><span class="line">php -r <span class="string">"if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') &#123; echo 'Installer verified'; &#125; else &#123; echo 'Installer corrupt'; unlink('composer-setup.php'); &#125; echo PHP_EOL;"</span></span><br><span class="line">php composer-setup.php</span><br><span class="line">php -r <span class="string">"unlink('composer-setup.php');"</span></span><br><span class="line">mv composer.phar /usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装-flarum"><a href="#安装-flarum" class="headerlink" title="安装 flarum"></a>安装 flarum</h3><p>安装 flarum 之前需要安装 php 的一些扩展 dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer<br>还需要安装一个 ext-curl 扩展，这个扩展在 composer 安装时尤为重要。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install php-curl</span><br></pre></td></tr></table></figure></p>
+<p>在你想运行 flarum 的文件夹下，注意该文件夹为空文件夹<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">composer create-project flarum/flarum . --stability=beta</span><br></pre></td></tr></table></figure></p>
+<p>安装成功以后，会生成一些文件，注意如果没有 vendor 文件夹。则说明安装失败，你可以在 flarum 官网询问解决办法。</p>
+<h3 id="运行-flarum"><a href="#运行-flarum" class="headerlink" title="运行 flarum"></a>运行 flarum</h3><p>配置 nginx 文件<br>在 /etc/nginx/sites-available 文件夹下，具体可以看该网站以前的文章。<br>将 root 指向 你安装 flarum 文件的 public 文件夹，删除 {location / {} }所有内容，加上 flarum 为我们写的，在 {server{}} 中加上 include flarum 文件夹/.nginx.conf,注意该文件为隐藏文件。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>修改 flarum 文件夹权限<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 775 flarum/* -R</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装数据库"><a href="#安装数据库" class="headerlink" title="安装数据库"></a>安装数据库</h3><p>进入你的网站，它会自动引导你进行安装，如果有任何问题，可以在 flarum <a href="https://discuss.flarum.org" target="_blank" rel="noopener">官网</a>询问。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/23/return-array-from-c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -718,197 +904,11 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/19/how-to-set-up-a-website/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/19/how-to-set-up-a-website/" class="post-title-link" itemprop="url">如何用hexo以及github搭建网站</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-19 17:36:08 / Modified: 18:01:28" itemprop="dateCreated datePublished" datetime="2019-03-19T17:36:08+08:00">2019-03-19</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/19/how-to-set-up-a-website/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/19/how-to-set-up-a-website/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>安装 Hexo 前，先安装 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs</a><br>选择自己操作系统的版本以后，在 cmd 输入下面的命令即可。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
-<h3 id="创建自己的网页"><a href="#创建自己的网页" class="headerlink" title="创建自己的网页"></a>创建自己的网页</h3><p>选择一个文件夹，在该文件夹下输入下面的命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></p>
-<p>blog 名字可以任意取，进入该 blog 目录,输入下面的命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
-<p>接下来启动服务器<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<p>也可以这样启动<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<p>它会提示你 Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.打开浏览器进入这个网址即可，Ctrl+C 关闭网站。</p>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>hexo 自带的主题功能不多，接下来推荐 next 主题<br>next 主题，安装 next 主题以前需要安装 git ,你可以点<a href="https://fify.me/2019/02/16/Git%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">这里</a>查看安装步骤，安装之后，进入文件浏览器，打开 blog 文件夹，鼠标右键选项栏中有一个 Git Bash Here,打开以后，输入下面命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
-<h3 id="配置自己的网站"><a href="#配置自己的网站" class="headerlink" title="配置自己的网站"></a>配置自己的网站</h3><p>hexo 在安装的文件夹下，有一个 _config.yml 文件，这里可以对网站的一些配置进行编辑<br>目前我们需要更改的配置有<br><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># Site</span></span><br><span class="line"><span class="symbol">title:</span> 浮躁狗</span><br><span class="line"><span class="symbol">subtitle:</span> 那都是很好很好的,可是她偏不喜欢。</span><br><span class="line"><span class="symbol">description:</span> 记录学习的博客</span><br><span class="line"><span class="symbol">keywords:</span> 学习 git python</span><br><span class="line"><span class="symbol">author:</span> 浮躁狗</span><br><span class="line"><span class="symbol">language:</span> zh-Hans</span><br><span class="line"><span class="symbol">timezone:</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Extensions</span></span><br><span class="line"><span class="meta">## Plugins: https:<span class="comment">//hexo.io/plugins/</span></span></span><br><span class="line"><span class="meta">## Themes: https:<span class="comment">//hexo.io/themes/</span></span></span><br><span class="line"><span class="symbol">theme:</span> next</span><br></pre></td></tr></table></figure></p>
-<p>最后一个 theme: next 指定我们刚才安装的 next 主题。将 # Site，改为自己喜欢的。</p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -953,7 +953,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

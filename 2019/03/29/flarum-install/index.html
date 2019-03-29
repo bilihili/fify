@@ -152,25 +152,25 @@ var _hmt = _hmt || [];
 </script>
 
 
-  <meta name="description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+  <meta name="description" content="Flarum， 是一款界面简约好看的论坛软件，用php编写。使用 flarum 需要 LNMP， 以及 composer 安装 composer使用 Ubuntu 系统, Ubuntu 18.04 配置 LNMP 点这里sudo apt install composer 其他系统php -r &quot;copy(&apos;https://getcomposer.org/installer&apos;, &apos;composer-">
 <meta name="keywords" content="学习 git python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网站开发">
-<meta property="og:url" content="https://fify.me/2019/02/18/website-design/index.html">
+<meta property="og:title" content="安装 Flarum 论坛详细过程">
+<meta property="og:url" content="https://fify.me/2019/03/29/flarum-install/index.html">
 <meta property="og:site_name" content="浮躁狗">
-<meta property="og:description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+<meta property="og:description" content="Flarum， 是一款界面简约好看的论坛软件，用php编写。使用 flarum 需要 LNMP， 以及 composer 安装 composer使用 Ubuntu 系统, Ubuntu 18.04 配置 LNMP 点这里sudo apt install composer 其他系统php -r &quot;copy(&apos;https://getcomposer.org/installer&apos;, &apos;composer-">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T11:52:58.782Z">
+<meta property="og:updated_time" content="2019-03-29T09:27:08.507Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网站开发">
-<meta name="twitter:description" content="如何同步代码感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。.idea__p">
+<meta name="twitter:title" content="安装 Flarum 论坛详细过程">
+<meta name="twitter:description" content="Flarum， 是一款界面简约好看的论坛软件，用php编写。使用 flarum 需要 LNMP， 以及 composer 安装 composer使用 Ubuntu 系统, Ubuntu 18.04 配置 LNMP 点这里sudo apt install composer 其他系统php -r &quot;copy(&apos;https://getcomposer.org/installer&apos;, &apos;composer-">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fify.me/2019/02/18/website-design/">
+  <link rel="canonical" href="https://fify.me/2019/03/29/flarum-install/">
 
 
 
@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-  <title>网站开发 | 浮躁狗</title>
+  <title>安装 Flarum 论坛详细过程 | 浮躁狗</title>
   
 
 
@@ -366,7 +366,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/18/website-design/">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/29/flarum-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浮躁狗">
@@ -383,7 +383,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h2 class="post-title" itemprop="name headline">网站开发
+          <h2 class="post-title" itemprop="name headline">安装 Flarum 论坛详细过程
 
               
             
@@ -409,7 +409,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-02-18 18:42:08 / Modified: 19:52:58" itemprop="dateCreated datePublished" datetime="2019-02-18T18:42:08+08:00">2019-02-18</time>
+              <time title="Created: 2019-03-29 17:06:28 / Modified: 17:27:08" itemprop="dateCreated datePublished" datetime="2019-03-29T17:06:28+08:00">2019-03-29</time>
             
 
             
@@ -431,7 +431,7 @@ var _hmt = _hmt || [];
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mywebsite/" itemprop="url" rel="index"><span itemprop="name">mywebsite</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
 
                 
                 
@@ -450,8 +450,8 @@ var _hmt = _hmt || [];
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/18/website-design/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/18/website-design/" itemprop="commentCount"></span>
+                <a href="/2019/03/29/flarum-install/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/29/flarum-install/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -479,10 +479,15 @@ var _hmt = _hmt || [];
       
 
       
-        <h3 id="如何同步代码"><a href="#如何同步代码" class="headerlink" title="如何同步代码"></a>如何同步代码</h3><p>感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。<br>因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。<br><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">.idea</span><br><span class="line">__pycache__</span><br><span class="line">db.sqlite3</span><br><span class="line">media<span class="regexp">/avatar/</span>*</span><br><span class="line">!media<span class="regexp">/avatar/</span>avatar.png</span><br><span class="line">media<span class="regexp">/images/</span>*</span><br><span class="line">media<span class="regexp">/temp/</span>*</span><br></pre></td></tr></table></figure></p>
-<p>需要保存默认的avatar以及migrations文件,其他图片不保存，顺便吐槽一下千牛，他的存储方案需要备案的域名。亚马逊的aws s3可以不用，但是昨天试了一试发现不能上传文件，而且告知我没有修改它的权限，可能是我不会设置的原因。<br>接下来是 Git 的原因，当我在服务器是pull时他告知我，我修改了服务器上的文件，需要我自己手动 merge，merge 是不可能 merge 的，所以我用了这个命令。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error: Your <span class="built_in">local</span> changes to the following files would be overwritten by merge:</span><br><span class="line">        home/templates/home/moments.html</span><br><span class="line">        user/templates/user/user.html</span><br><span class="line">        user/views.py</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line"></span><br><span class="line">$ git reset --hard</span><br></pre></td></tr></table></figure></p>
-<p>因为不存在文件丢失的问题，所以我就不 stash them 了。</p>
-<h3 id="图片如何保存"><a href="#图片如何保存" class="headerlink" title="图片如何保存"></a>图片如何保存</h3><p>听说instagram使用的也是 aws s3 的方案。但是目前我还是存储在服务器上，大不了崩了重新搭建一次。</p>
+        <p>Flarum， 是一款界面简约好看的论坛软件，用php编写。<br>使用 flarum 需要 LNMP， 以及 composer</p>
+<h3 id="安装-composer"><a href="#安装-composer" class="headerlink" title="安装 composer"></a>安装 composer</h3><p>使用 Ubuntu 系统, Ubuntu 18.04 配置 LNMP 点<a href="https://fify.me/2019/02/16/Ubuntu-18-04-%E9%83%A8%E7%BD%B2LNMP/">这里</a><br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install composer</span><br></pre></td></tr></table></figure></p>
+<p>其他系统<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php -r <span class="string">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span></span><br><span class="line">php -r <span class="string">"if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') &#123; echo 'Installer verified'; &#125; else &#123; echo 'Installer corrupt'; unlink('composer-setup.php'); &#125; echo PHP_EOL;"</span></span><br><span class="line">php composer-setup.php</span><br><span class="line">php -r <span class="string">"unlink('composer-setup.php');"</span></span><br><span class="line">mv composer.phar /usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装-flarum"><a href="#安装-flarum" class="headerlink" title="安装 flarum"></a>安装 flarum</h3><p>安装 flarum 之前需要安装 php 的一些扩展 dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer<br>还需要安装一个 ext-curl 扩展，这个扩展在 composer 安装时尤为重要。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install php-curl</span><br></pre></td></tr></table></figure></p>
+<p>在你想运行 flarum 的文件夹下，注意该文件夹为空文件夹<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">composer create-project flarum/flarum . --stability=beta</span><br></pre></td></tr></table></figure></p>
+<p>安装成功以后，会生成一些文件，注意如果没有 vendor 文件夹。则说明安装失败，你可以在 flarum 官网询问解决办法。</p>
+<h3 id="运行-flarum"><a href="#运行-flarum" class="headerlink" title="运行 flarum"></a>运行 flarum</h3><p>配置 nginx 文件<br>在 /etc/nginx/sites-available 文件夹下，具体可以看该网站以前的文章。<br>将 root 指向 你安装 flarum 文件的 public 文件夹，删除 {location / {} }所有内容，加上 flarum 为我们写的，在 {server{}} 中加上 include flarum 文件夹/.nginx.conf,注意该文件为隐藏文件。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>修改 flarum 文件夹权限<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 775 flarum/* -R</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装数据库"><a href="#安装数据库" class="headerlink" title="安装数据库"></a>安装数据库</h3><p>进入你的网站，它会自动引导你进行安装，如果有任何问题，可以在 flarum <a href="https://discuss.flarum.org" target="_blank" rel="noopener">官网</a>询问。</p>
 
       
     </div>
@@ -517,8 +522,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/17/let-ssl-support-your-website/" rel="next" title="免费让网站(nginx)支持https">
-                <i class="fa fa-chevron-left"></i> 免费让网站(nginx)支持https
+              <a href="/2019/03/23/return-array-from-c/" rel="next" title="C 语言如何返回数组">
+                <i class="fa fa-chevron-left"></i> C 语言如何返回数组
               </a>
             
           </div>
@@ -526,10 +531,6 @@ var _hmt = _hmt || [];
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/04/python-qrcode/" rel="prev" title="Python 开发个性化二维码">
-                Python 开发个性化二维码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -668,7 +669,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何同步代码"><span class="nav-number">1.</span> <span class="nav-text">如何同步代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片如何保存"><span class="nav-number">2.</span> <span class="nav-text">图片如何保存</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-composer"><span class="nav-number">1.</span> <span class="nav-text">安装 composer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-flarum"><span class="nav-number">2.</span> <span class="nav-text">安装 flarum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行-flarum"><span class="nav-number">3.</span> <span class="nav-text">运行 flarum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装数据库"><span class="nav-number">4.</span> <span class="nav-text">安装数据库</span></a></li></ol></div>
             
 
           </div>
