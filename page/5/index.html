@@ -334,6 +334,216 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/16/Ubuntu-18-04-部署LNMP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/16/Ubuntu-18-04-部署LNMP/" class="post-title-link" itemprop="url">Ubuntu 18.04 部署LNMP(LEMP)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-16 18:22:22" itemprop="dateCreated datePublished" datetime="2019-02-16T18:22:22+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-23 20:04:20" itemprop="dateModified" datetime="2019-03-23T20:04:20+08:00">2019-03-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/16/Ubuntu-18-04-部署LNMP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/16/Ubuntu-18-04-部署LNMP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是LNMP"><a href="#什么是LNMP" class="headerlink" title="什么是LNMP"></a>什么是LNMP</h3><p>四个英文单词的缩写Linux nginx mysql php</p>
+<h3 id="第一步安装Nginx"><a href="#第一步安装Nginx" class="headerlink" title="第一步安装Nginx"></a>第一步安装Nginx</h3><p>安装Nginx需要Ubuntu的sudo权限。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install nginx</span><br></pre></td></tr></table></figure></p>
+<p>成功之后打开浏览器输入你的IP地址访问一般你会看见下面的图片<br><img src="https://assets.digitalocean.com/articles/lemp_ubuntu_1604/nginx_default.png" alt="nginx"></p>
+<h3 id="第二步安装Mysql"><a href="#第二步安装Mysql" class="headerlink" title="第二步安装Mysql"></a>第二步安装Mysql</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
+<p>成功以后<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
+<p>根据提示输入密码<br>成功以后<br>修改密码验证方式，如果使用默认的，不能用你刚才输入的密码登录<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo mysql</span><br><span class="line">mysql&gt; SELECT user,authentication_string,plugin,host FROM mysql.user;</span><br></pre></td></tr></table></figure></p>
+<p>你会看见root一行验证方式为auth_socket<br>修改它，并设置为自己的密码<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>刷新设置<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p>检查是否成功<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; SELECT user,authentication_string,plugin,host FROM mysql.user;</span><br></pre></td></tr></table></figure></p>
+<p>退出<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">msyql&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
+<p>注意以后登录mysql必须用<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<h3 id="第三步安装php以及配置nginx"><a href="#第三步安装php以及配置nginx" class="headerlink" title="第三步安装php以及配置nginx"></a>第三步安装php以及配置nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository universe</span><br><span class="line">$ sudo apt install php-fpm php-mysql</span><br></pre></td></tr></table></figure>
+<p>成功之后配置nginx<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano /etc/nginx/sites-available/example.com</span><br></pre></td></tr></table></figure></p>
+<p>(example.com可以任意取名)<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        root /var/www/html;</span><br><span class="line">        index index.php index.html index.htm index.nginx-debian.html;</span><br><span class="line">        server_name example.com;(改为自己的)</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">                include snippets/fastcgi-php.conf;</span><br><span class="line">                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ /\.ht &#123;</span><br><span class="line">                deny all;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>软链接<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/</span><br></pre></td></tr></table></figure></p>
+<p>取消default软链接<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo unlink /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure></p>
+<p>检查刚才的配置文件语法<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nginx -t</span><br></pre></td></tr></table></figure></p>
+<p>重启nginx生效<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>检查php是否成功运行<br>在/var/www/html下创建一个文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim index.php</span><br></pre></td></tr></table></figure></p>
+<p>文件内容:<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">phpinfo();</span><br></pre></td></tr></table></figure></p>
+<p>再次进入刚才的网站<br>你如果看见如下图片便说明安装成功<br><img src="https://assets.digitalocean.com/lemp_ubuntu_1804/php_info_1804.png" alt="phpinfo"><br>删除刚才的文件。以后会写https的配置。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/16/Git入门学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -552,7 +762,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
