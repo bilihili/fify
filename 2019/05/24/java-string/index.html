@@ -128,7 +128,7 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="浮躁狗">
 <meta property="og:description" content="从概念上讲， Java 字符串就是 Unicode 字符序列。 例如， 串“ Java\u2122” 由 5 个Unicode 字符 J、 a、 v、 a 和™。Java 没有内置的字符串类型，而是在标准 Java 类库中提供了一个预定义类，很自然地叫做 String。每个用双引号括起来的字符串都是 String类的一个实例：String e = &quot;&quot;; // an empty stringStr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-24T02:30:41.278Z">
+<meta property="og:updated_time" content="2019-05-24T02:50:15.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 字符串操作">
 <meta name="twitter:description" content="从概念上讲， Java 字符串就是 Unicode 字符序列。 例如， 串“ Java\u2122” 由 5 个Unicode 字符 J、 a、 v、 a 和™。Java 没有内置的字符串类型，而是在标准 Java 类库中提供了一个预定义类，很自然地叫做 String。每个用双引号括起来的字符串都是 String类的一个实例：String e = &quot;&quot;; // an empty stringStr">
@@ -377,7 +377,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-05-24 10:21:09 / Modified: 10:30:41" itemprop="dateCreated datePublished" datetime="2019-05-24T10:21:09+08:00">2019-05-24</time>
+              <time title="Created: 2019-05-24 10:21:09 / Modified: 10:50:15" itemprop="dateCreated datePublished" datetime="2019-05-24T10:21:09+08:00">2019-05-24</time>
             
 
             
@@ -452,6 +452,10 @@ var _hmt = _hmt || [];
 <p>则 s 代表 Hello</p>
 <h3 id="拼接两个字符串"><a href="#拼接两个字符串" class="headerlink" title="拼接两个字符串"></a>拼接两个字符串</h3><p>拼接两个字符串可以直接用 + 号<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">"I am "</span>;</span><br><span class="line">String str1 = <span class="string">"genius"</span>;</span><br><span class="line">String s = str + str1;</span><br></pre></td></tr></table></figure></p>
 <p>则 s 代表 I am genius</p>
+<h3 id="字符串添加风格符"><a href="#字符串添加风格符" class="headerlink" title="字符串添加风格符"></a>字符串添加风格符</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s = String.join(<span class="string">"/"</span>,<span class="string">"S"</span>,<span class="string">"M"</span>,<span class="string">"L"</span>, <span class="string">"XL"</span>);</span><br></pre></td></tr></table></figure>
+<p>则 s 代表 S/M/L/XL</p>
+<h3 id="Java-不可变字符串"><a href="#Java-不可变字符串" class="headerlink" title="Java 不可变字符串"></a>Java 不可变字符串</h3><p>String 类没有提供修改字符串的方法，当然也没有必要。<br>在 Java 中修改字符串相当简单， 只需要用到上面说的 substring 以及 字符串拼接即可。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">"FC Bayern"</span>;</span><br><span class="line">String s = <span class="string">"Barcelona"</span>;</span><br><span class="line">String get = e.substring(<span class="number">0</span>,<span class="number">3</span>)+s;</span><br></pre></td></tr></table></figure></p>
+<p>则 get 为 FC Barcelona</p>
 
       
     </div>
@@ -639,7 +643,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#子串"><span class="nav-number">1.</span> <span class="nav-text">子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼接两个字符串"><span class="nav-number">2.</span> <span class="nav-text">拼接两个字符串</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#子串"><span class="nav-number">1.</span> <span class="nav-text">子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼接两个字符串"><span class="nav-number">2.</span> <span class="nav-text">拼接两个字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串添加风格符"><span class="nav-number">3.</span> <span class="nav-text">字符串添加风格符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-不可变字符串"><span class="nav-number">4.</span> <span class="nav-text">Java 不可变字符串</span></a></li></ol></div>
             
 
           </div>
