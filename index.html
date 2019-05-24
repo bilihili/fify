@@ -379,7 +379,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-05-24 10:21:09 / Modified: 10:58:37" itemprop="dateCreated datePublished" datetime="2019-05-24T10:21:09+08:00">2019-05-24</time>
+              <time title="Created: 2019-05-24 10:21:09 / Modified: 11:01:05" itemprop="dateCreated datePublished" datetime="2019-05-24T10:21:09+08:00">2019-05-24</time>
             
 
             
@@ -451,7 +451,7 @@ var _hmt = _hmt || [];
       
         
           
-            <p>从概念上讲， Java 字符串就是 Unicode 字符序列。 例如， 串“ Java\u2122” 由 5 个<br>Unicode 字符 J、 a、 v、 a 和™。Java 没有内置的字符串类型，而是在标准 Java 类库中提供了<br>一个预定义类，很自然地叫做 String。每个用双引号括起来的字符串都是 String类的一个实<br>例：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">""</span>; <span class="comment">// an empty string</span></span><br><span class="line">String greeting = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure></p>
+            <p>从概念上讲， Java 字符串就是 Unicode 字符序列。 例如， 串“ Java\u2122” 由 5 个<br>Unicode 字符 J、 a、 v、 a 和™。Java 没有内置的字符串类型，而是在标准 Java 类库中提供了<br>一个预定义类，很自然地叫做 String。每个用双引号括起来的字符串都是 String类的一个实<br>例：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">""</span>;</span><br><span class="line">String greeting = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure></p>
 <h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h3><p>String 类当中的 substring 方法可以截取较大的字符串。具体用法为：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">"Hello world!"</span>;</span><br><span class="line">String s = str.substring(<span class="number">0</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure></p>
 <p>则 s 代表 Hello</p>
 <h3 id="拼接两个字符串"><a href="#拼接两个字符串" class="headerlink" title="拼接两个字符串"></a>拼接两个字符串</h3><p>拼接两个字符串可以直接用 + 号<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">"I am "</span>;</span><br><span class="line">String str1 = <span class="string">"genius"</span>;</span><br><span class="line">String s = str + str1;</span><br></pre></td></tr></table></figure></p>
@@ -461,7 +461,7 @@ var _hmt = _hmt || [];
 <h3 id="Java-不可变字符串"><a href="#Java-不可变字符串" class="headerlink" title="Java 不可变字符串"></a>Java 不可变字符串</h3><p>String 类没有提供修改字符串的方法，当然也没有必要。<br>在 Java 中修改字符串相当简单， 只需要用到上面说的 substring 以及 字符串拼接即可。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">"FC Bayern"</span>;</span><br><span class="line">String s = <span class="string">"Barcelona"</span>;</span><br><span class="line">String get = e.substring(<span class="number">0</span>,<span class="number">3</span>)+s;</span><br></pre></td></tr></table></figure></p>
 <p>则 get 为 FC Barcelona</p>
 <p>###检查字符串是否相等<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">"I am a genius"</span>;</span><br><span class="line">String b = <span class="string">"I am a genius too"</span>;</span><br><span class="line"><span class="keyword">boolean</span> flag = e.equals(b);</span><br></pre></td></tr></table></figure></p>
-<p>如果 e 和 b 相等则 flag 为 true， 反之为 false。<br>P.S. 一定不要使用= 运算符检测两个字符串是否相等！ 这个运算符只能够确定两个字串<br>是否放置在同一个位置上。当然， 如果字符串放置在同一个位置上， 它们必然相等。但是，<br>完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。</p>
+<p>如果 e 和 b 相等则 flag 为 true， 反之为 false。<br>P.S. 一定不要使用 == 运算符检测两个字符串是否相等！这个运算符只能够确定两个字串<br>是否放置在同一个位置上。当然，如果字符串放置在同一个位置上，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。</p>
 
           
         
