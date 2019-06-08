@@ -334,6 +334,194 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/05/24/java-string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/24/java-string/" class="post-title-link" itemprop="url">Java 字符串操作</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-24 10:21:09 / Modified: 11:01:05" itemprop="dateCreated datePublished" datetime="2019-05-24T10:21:09+08:00">2019-05-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/05/24/java-string/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/24/java-string/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>从概念上讲， Java 字符串就是 Unicode 字符序列。 例如， 串“ Java\u2122” 由 5 个<br>Unicode 字符 J、 a、 v、 a 和™。Java 没有内置的字符串类型，而是在标准 Java 类库中提供了<br>一个预定义类，很自然地叫做 String。每个用双引号括起来的字符串都是 String类的一个实<br>例：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">""</span>;</span><br><span class="line">String greeting = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h3><p>String 类当中的 substring 方法可以截取较大的字符串。具体用法为：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">"Hello world!"</span>;</span><br><span class="line">String s = str.substring(<span class="number">0</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure></p>
+<p>则 s 代表 Hello</p>
+<h3 id="拼接两个字符串"><a href="#拼接两个字符串" class="headerlink" title="拼接两个字符串"></a>拼接两个字符串</h3><p>拼接两个字符串可以直接用 + 号<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">"I am "</span>;</span><br><span class="line">String str1 = <span class="string">"genius"</span>;</span><br><span class="line">String s = str + str1;</span><br></pre></td></tr></table></figure></p>
+<p>则 s 代表 I am genius</p>
+<h3 id="字符串添加风格符"><a href="#字符串添加风格符" class="headerlink" title="字符串添加风格符"></a>字符串添加风格符</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s = String.join(<span class="string">"/"</span>,<span class="string">"S"</span>,<span class="string">"M"</span>,<span class="string">"L"</span>, <span class="string">"XL"</span>);</span><br></pre></td></tr></table></figure>
+<p>则 s 代表 S/M/L/XL</p>
+<h3 id="Java-不可变字符串"><a href="#Java-不可变字符串" class="headerlink" title="Java 不可变字符串"></a>Java 不可变字符串</h3><p>String 类没有提供修改字符串的方法，当然也没有必要。<br>在 Java 中修改字符串相当简单， 只需要用到上面说的 substring 以及 字符串拼接即可。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">"FC Bayern"</span>;</span><br><span class="line">String s = <span class="string">"Barcelona"</span>;</span><br><span class="line">String get = e.substring(<span class="number">0</span>,<span class="number">3</span>)+s;</span><br></pre></td></tr></table></figure></p>
+<p>则 get 为 FC Barcelona</p>
+<p>###检查字符串是否相等<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String e = <span class="string">"I am a genius"</span>;</span><br><span class="line">String b = <span class="string">"I am a genius too"</span>;</span><br><span class="line"><span class="keyword">boolean</span> flag = e.equals(b);</span><br></pre></td></tr></table></figure></p>
+<p>如果 e 和 b 相等则 flag 为 true， 反之为 false。<br>P.S. 一定不要使用 == 运算符检测两个字符串是否相等！这个运算符只能够确定两个字串<br>是否放置在同一个位置上。当然，如果字符串放置在同一个位置上，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/05/17/google-earth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -677,191 +865,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/04/27/how-to-install-rails-on-ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/27/how-to-install-rails-on-ubuntu/" class="post-title-link" itemprop="url">Linux 下配置rails</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-04-27 16:54:12 / Modified: 17:15:58" itemprop="dateCreated datePublished" datetime="2019-04-27T16:54:12+08:00">2019-04-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/rails/" itemprop="url" rel="index"><span itemprop="name">rails</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/04/27/how-to-install-rails-on-ubuntu/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/27/how-to-install-rails-on-ubuntu/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="安装rvm"><a href="#安装rvm" class="headerlink" title="安装rvm"></a>安装rvm</h2><p>解决安装密钥时的问题<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br></pre></td></tr></table></figure></p>
-<p>安装rvm<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -sSL https://get.rvm.io | bash -s stable</span><br></pre></td></tr></table></figure></p>
-<h3 id="用-rvm-安装-ruby"><a href="#用-rvm-安装-ruby" class="headerlink" title="用 rvm 安装 ruby"></a>用 rvm 安装 ruby</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rvm requirements</span><br><span class="line">rvm install 2.6.3</span><br></pre></td></tr></table></figure>
-<p>设置 ruby 版本<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rvm use 2.6.3 --default</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装-rails"><a href="#安装-rails" class="headerlink" title="安装 rails"></a>安装 rails</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gem install rails</span><br></pre></td></tr></table></figure>
-<p>查看 rails 版本<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rails -v</span><br><span class="line">Rails 5.2.1</span><br></pre></td></tr></table></figure></p>
-<h3 id="新建-rails-项目"><a href="#新建-rails-项目" class="headerlink" title="新建 rails 项目"></a>新建 rails 项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rails new blog</span><br></pre></td></tr></table></figure>
-<p>rails 官方指南源码 <a href="https://github.com/luowanshun/rails_guide_code" target="_blank" rel="noopener">github</a></p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -911,7 +914,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
