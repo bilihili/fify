@@ -334,6 +334,186 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/06/14/how-to-spider-in-go/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/14/how-to-spider-in-go/" class="post-title-link" itemprop="url">在 go 语言中使用爬虫 goquery</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-14 21:31:23 / Modified: 22:03:55" itemprop="dateCreated datePublished" datetime="2019-06-14T21:31:23+08:00">2019-06-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/06/14/how-to-spider-in-go/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/14/how-to-spider-in-go/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>首先需要安装 goquery, 和 jquery 选择器一样，接下来的代码展示了如何获取懂球帝关于 2018/2019 英超排名以及积分的数据。<br><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">	<span class="string">"net/http"</span></span><br><span class="line">	<span class="string">"strings"</span></span><br><span class="line">	<span class="string">"github.com/PuerkitoBio/goquery"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	res, err := http.Get(<span class="string">"http://dongqiudi.com/data?competition=7"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> res.Body.Close()</span><br><span class="line">	<span class="keyword">if</span> res.StatusCode != <span class="number">200</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">"err"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	doc, err := goquery.NewDocumentFromReader(res.Body)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">	&#125;</span><br><span class="line">	doc.Find(<span class="string">"table.list_1"</span>).Each(<span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>, s *goquery.Selection)</span></span>&#123;</span><br><span class="line">		L := s.Find(<span class="string">"a"</span>).Text()</span><br><span class="line">		t := strings.Replace(L,<span class="string">" "</span>,<span class="string">""</span>, <span class="number">-1</span>)</span><br><span class="line">		LL := strings.Replace(t,<span class="string">"\n"</span>,<span class="string">"/"</span>, <span class="number">-1</span>)</span><br><span class="line">		k := strings.Trim(LL,<span class="string">"/"</span>)</span><br><span class="line">		d := strings.Split(k,<span class="string">"///"</span>)</span><br><span class="line">		fmt.Println(d)</span><br><span class="line">	&#125;)</span><br><span class="line">	doc.Find(<span class="string">"table.list_1 tbody a"</span>).Each(<span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>, gg *goquery.Selection)</span></span>&#123;</span><br><span class="line">		tt,_ := gg.Find(<span class="string">"img"</span>).Attr(<span class="string">"src"</span>)</span><br><span class="line">		fmt.Println(tt)</span><br><span class="line">	&#125;)</span><br><span class="line">	doc.Find(<span class="string">"table.list_1 tbody tr td:not(.team)"</span>).Each(<span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>, gg *goquery.Selection)</span></span>&#123;</span><br><span class="line">		tt := gg.Text()</span><br><span class="line">		</span><br><span class="line">		fmt.Println(tt)</span><br><span class="line">		fmt.Println(<span class="string">""</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>核心代码是<br><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">doc, err := goquery.NewDocumentFromReader(res.Body)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">	&#125;</span><br><span class="line">	doc.Find(<span class="string">"table.list_1"</span>).Each(<span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>, s *goquery.Selection)</span></span>&#123;</span><br><span class="line">		L := s.Find(<span class="string">"a"</span>).Text()</span><br><span class="line">		t := strings.Replace(L,<span class="string">" "</span>,<span class="string">""</span>, <span class="number">-1</span>)</span><br><span class="line">		LL := strings.Replace(t,<span class="string">"\n"</span>,<span class="string">"/"</span>, <span class="number">-1</span>)</span><br><span class="line">		k := strings.Trim(LL,<span class="string">"/"</span>)</span><br><span class="line">		d := strings.Split(k,<span class="string">"///"</span>)</span><br><span class="line">		fmt.Println(d)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>将html内容传给goquery后，处理为 doc ，再利用 doc 的 find，其中 find 传入的就是选择器，参考 jQuery 的选择器使用方法即可。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/06/08/bose-qc-35-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -536,7 +716,7 @@ var _hmt = _hmt || [];
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/why-use-pointer-frequently/" class="post-title-link" itemprop="url">为什么有在 go 中频繁用指针</a>
+                <a href="/2019/06/07/why-use-pointer-frequently/" class="post-title-link" itemprop="url">为什么要在 go 中频繁用指针</a>
               
             
           </h2>
@@ -561,12 +741,24 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-06-07 19:49:00 / Modified: 19:53:06" itemprop="dateCreated datePublished" datetime="2019-06-07T19:49:00+08:00">2019-06-07</time>
+              <time title="Created: 2019-06-07 19:49:00" itemprop="dateCreated datePublished" datetime="2019-06-07T19:49:00+08:00">2019-06-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-14 22:04:26" itemprop="dateModified" datetime="2019-06-14T22:04:26+08:00">2019-06-14</time>
               
             
           </span>
@@ -664,168 +856,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/05/26/go-gin-day1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/26/go-gin-day1/" class="post-title-link" itemprop="url">go使用gin框架</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-26 11:08:48 / Modified: 11:11:03" itemprop="dateCreated datePublished" datetime="2019-05-26T11:08:48+08:00">2019-05-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/05/26/go-gin-day1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/26/go-gin-day1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="一个简单的程序"><a href="#一个简单的程序" class="headerlink" title="一个简单的程序"></a>一个简单的程序</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"github.com/gin-gonic/gin"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	r := gin.Default()</span><br><span class="line">	r.GET(<span class="string">"/ping"</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">		c.JSON(<span class="number">200</span>, gin.H&#123;</span><br><span class="line">			<span class="string">"message"</span>: <span class="string">"pong"</span>,</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">	r.Run() <span class="comment">// listen and serve on 0.0.0.0:8080</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行<br><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">go</span> run start.<span class="keyword">go</span></span><br></pre></td></tr></table></figure></p>
-<p>打开 127.0.0.1:8080/ping<br>关闭它 CRTL + c</p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -875,7 +905,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -906,7 +936,9 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
