@@ -334,6 +334,193 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/22/using-free-aws-ec2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/22/using-free-aws-ec2/" class="post-title-link" itemprop="url">如何使用亚马逊一年免费的 AWS EC2 服务器</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-22 15:01:15 / Modified: 15:40:39" itemprop="dateCreated datePublished" datetime="2019-03-22T15:01:15+08:00">2019-03-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/03/22/using-free-aws-ec2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/22/using-free-aws-ec2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="注册条件"><a href="#注册条件" class="headerlink" title="注册条件"></a>注册条件</h3><p>拥有一张信用卡，VISA，或者Mastercard</p>
+<h3 id="创建-EC2-实例"><a href="#创建-EC2-实例" class="headerlink" title="创建 EC2 实例"></a>创建 EC2 实例</h3><p>要开始使用 EC2，您需要启动一个被称为 Amazon EC2 实例的虚拟服务器。我的地区选在 Ohio ,你可以在菜单栏中修改地区。<br><img src="/2019/03/22/using-free-aws-ec2/awsstart.PNG" alt="intro"></p>
+<h3 id="选择-Amazon-系统镜像"><a href="#选择-Amazon-系统镜像" class="headerlink" title="选择 Amazon 系统镜像"></a>选择 Amazon 系统镜像</h3><p>我选择的是 Ubuntu 18.04 ,尽量避免选择 Red Hat Enterprise Linux 7.6 。<br><img src="/2019/03/22/using-free-aws-ec2/system.PNG" alt="system"></p>
+<h3 id="选择一个实例对象"><a href="#选择一个实例对象" class="headerlink" title="选择一个实例对象"></a>选择一个实例对象</h3><p>选择 t2.micro ,这个时对应的免费一年的版本。<br><img src="/2019/03/22/using-free-aws-ec2/type.PNG" alt="type"></p>
+<h3 id="设置存储"><a href="#设置存储" class="headerlink" title="设置存储"></a>设置存储</h3><p>免费版本最大的存储空间为 30 G 。<br><img src="/2019/03/22/using-free-aws-ec2/store.PNG" alt="store"></p>
+<h3 id="配置安全组"><a href="#配置安全组" class="headerlink" title="配置安全组"></a>配置安全组</h3><p>这里添加 http 80 端口，https 443 端口。<br><img src="/2019/03/22/using-free-aws-ec2/secure.PNG" alt="secure"></p>
+<h3 id="配置密钥对"><a href="#配置密钥对" class="headerlink" title="配置密钥对"></a>配置密钥对</h3><p>成功以后会有一个 name.pem 文件，保存下来，名字可以任意取。</p>
+<h3 id="ssh-连接-EC2"><a href="#ssh-连接-EC2" class="headerlink" title="ssh 连接 EC2"></a>ssh 连接 EC2</h3><p>在 .pem 文件目录下，打开 Git Bash<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i name.pem ubuntu@公有DNS</span><br></pre></td></tr></table></figure></p>
+<p>公有 DNS 在运行实例的状态栏下面可以看到。</p>
+<p>另外也有一个公有 IP 地址，每月流入流量不计，流出免费流量为 15G.</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/19/how-to-set-up-a-website/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -695,188 +882,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/18/c-plus-plus-day-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/18/c-plus-plus-day-1/" class="post-title-link" itemprop="url">c语言学习第一天</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-18 08:45:55 / Modified: 09:18:35" itemprop="dateCreated datePublished" datetime="2019-03-18T08:45:55+08:00">2019-03-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/18/c-plus-plus-day-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/18/c-plus-plus-day-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><p>写c++ 的软件我用的是 <a href="https://sourceforge.net/projects/orwelldevcpp/" target="_blank" rel="noopener">dev C++</a>， 学校要求的是VC6.0, 我觉得那个软件又老，安装步骤又麻烦，当然 codeblocks 也可以， 不过需要下载带编译器版本的<a href="http://www.codeblocks.org" target="_blank" rel="noopener">codeblocks</a>，当然大神也可以在 Linux 下用 vim (emacs)写，clang++编译。</p>
-<h3 id="开始写代码"><a href="#开始写代码" class="headerlink" title="开始写代码"></a>开始写代码</h3><p>首先， 先来一个 hello world<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello, world!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>当然 hello world 也可以这样写<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello, world!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>c++每次换行需要一个 (;) 现在许多新出的语言开始摒弃这一点，比如 swift，kotlin，当然 Python 也不需要使用(;)<br>书上说c++的 cout 比 printf 更加简单，我也是这样认为的，但它也提到 cout 不如 printf 灵活。</p>
-<h3 id="c-注释"><a href="#c-注释" class="headerlink" title="c++ 注释"></a>c++ 注释</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">//可以用双斜杠</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello, world!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="c-四则运算"><a href="#c-四则运算" class="headerlink" title="c++ 四则运算"></a>c++ 四则运算</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> c = a+b;<span class="comment">//加法</span></span><br><span class="line">    <span class="keyword">int</span> d = a-b;<span class="comment">//减法</span></span><br><span class="line">    <span class="keyword">int</span> e = a*b;<span class="comment">//乘法</span></span><br><span class="line">    <span class="keyword">int</span> f = a/b;<span class="comment">//除法</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;c&lt;&lt;d&lt;&lt;e&lt;&lt;f;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -926,7 +931,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -959,7 +964,9 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
