@@ -334,6 +334,382 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/19/how-to-set-up-a-website/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/19/how-to-set-up-a-website/" class="post-title-link" itemprop="url">如何用hexo以及github搭建网站</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-19 17:36:08 / Modified: 18:01:28" itemprop="dateCreated datePublished" datetime="2019-03-19T17:36:08+08:00">2019-03-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/03/19/how-to-set-up-a-website/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/19/how-to-set-up-a-website/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>安装 Hexo 前，先安装 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs</a><br>选择自己操作系统的版本以后，在 cmd 输入下面的命令即可。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<h3 id="创建自己的网页"><a href="#创建自己的网页" class="headerlink" title="创建自己的网页"></a>创建自己的网页</h3><p>选择一个文件夹，在该文件夹下输入下面的命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></p>
+<p>blog 名字可以任意取，进入该 blog 目录,输入下面的命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>接下来启动服务器<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p>也可以这样启动<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>它会提示你 Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.打开浏览器进入这个网址即可，Ctrl+C 关闭网站。</p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>hexo 自带的主题功能不多，接下来推荐 next 主题<br>next 主题，安装 next 主题以前需要安装 git ,你可以点<a href="https://fify.me/2019/02/16/Git%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">这里</a>查看安装步骤，安装之后，进入文件浏览器，打开 blog 文件夹，鼠标右键选项栏中有一个 Git Bash Here,打开以后，输入下面命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置自己的网站"><a href="#配置自己的网站" class="headerlink" title="配置自己的网站"></a>配置自己的网站</h3><p>hexo 在安装的文件夹下，有一个 _config.yml 文件，这里可以对网站的一些配置进行编辑<br>目前我们需要更改的配置有<br><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># Site</span></span><br><span class="line"><span class="symbol">title:</span> 浮躁狗</span><br><span class="line"><span class="symbol">subtitle:</span> 那都是很好很好的,可是她偏不喜欢。</span><br><span class="line"><span class="symbol">description:</span> 记录学习的博客</span><br><span class="line"><span class="symbol">keywords:</span> 学习 git python</span><br><span class="line"><span class="symbol">author:</span> 浮躁狗</span><br><span class="line"><span class="symbol">language:</span> zh-Hans</span><br><span class="line"><span class="symbol">timezone:</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Extensions</span></span><br><span class="line"><span class="meta">## Plugins: https:<span class="comment">//hexo.io/plugins/</span></span></span><br><span class="line"><span class="meta">## Themes: https:<span class="comment">//hexo.io/themes/</span></span></span><br><span class="line"><span class="symbol">theme:</span> next</span><br></pre></td></tr></table></figure></p>
+<p>最后一个 theme: next 指定我们刚才安装的 next 主题。将 # Site，改为自己喜欢的。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/18/how-to-write-c-code-using-android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/18/how-to-write-c-code-using-android/" class="post-title-link" itemprop="url">如何用安卓写C语言以及c++</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-18 09:22:46" itemprop="dateCreated datePublished" datetime="2019-03-18T09:22:46+08:00">2019-03-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-20 23:02:27" itemprop="dateModified" datetime="2019-03-20T23:02:27+08:00">2019-03-20</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/03/18/how-to-write-c-code-using-android/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/18/how-to-write-c-code-using-android/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/2019/03/18/how-to-write-c-code-using-android/1.jpg" alt="c4droid"><br>安卓上面有一个软件叫做 c4droid , 在 Google Play 商店里面可以下载，不过需要花费几美元，下载的时候同时需要下载 GCC for C4droid。并且可以编写 SDL,可用来写游戏。</p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/18/c-plus-plus-day-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -501,392 +877,11 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/03/04/python-qrcode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/python-qrcode/" class="post-title-link" itemprop="url">Python 开发个性化二维码</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-04 10:14:44 / Modified: 21:28:31" itemprop="dateCreated datePublished" datetime="2019-03-04T10:14:44+08:00">2019-03-04</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/04/python-qrcode/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/04/python-qrcode/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="介绍-qrcode"><a href="#介绍-qrcode" class="headerlink" title="介绍 qrcode"></a>介绍 qrcode</h2><p>QrCode 是一个二维码生成器，可生成普通二维码、带图片的艺术二维码（黑白与彩色）、动态二维码（黑白与彩色）。</p>
-<h2 id="安装-qrcode"><a href="#安装-qrcode" class="headerlink" title="安装 qrcode"></a>安装 qrcode</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install myqr</span><br></pre></td></tr></table></figure>
-<p>安装qrcode 需要的依赖库有 pillow, numpy, imageio</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myqr 	Words</span><br><span class="line">		[-v &#123;1,2,3,...,40&#125;]</span><br><span class="line">		[-l &#123;L,M,Q,H&#125;]</span><br><span class="line">        [-n output-filename]</span><br><span class="line">		[-d output-directory]</span><br><span class="line">		[-p picture_file]</span><br><span class="line">		[-c]</span><br><span class="line">		[-con contrast]</span><br><span class="line">		[-bri brightness]</span><br></pre></td></tr></table></figure>
-<h3 id="生成普通二维码"><a href="#生成普通二维码" class="headerlink" title="生成普通二维码"></a>生成普通二维码</h3><p><img src="/2019/03/04/python-qrcode/qrcode.png" width="20%" height="20%"></p>
-<p>用字符串生成二维码<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myqr https://www.bilihili.com</span><br></pre></td></tr></table></figure></p>
-<p>文件默认名为 qrcode.png，存储位置为运行该指令的文件夹下</p>
-<h3 id="修改默认名以及默认存储位置"><a href="#修改默认名以及默认存储位置" class="headerlink" title="修改默认名以及默认存储位置"></a>修改默认名以及默认存储位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myqr https://www.bilihili.com -n erweima.jpg -d /path/to/jpg/</span><br></pre></td></tr></table></figure>
-<p>-n (name) 定义名字 支持的文件格式有 .jpg, .png, .bmp, .gif<br>-d (directory) 定义位置</p>
-<h3 id="生成艺术二维码"><a href="#生成艺术二维码" class="headerlink" title="生成艺术二维码"></a>生成艺术二维码</h3><p> <img src="/2019/03/04/python-qrcode/bilihilib.png" width="20%" height="20%"><br><img src="/2019/03/04/python-qrcode/bilihili.png" width="20%" height="20%"><br><img src="/2019/03/04/python-qrcode/bilihili.gif" width="20%" height="20%"><br><img src="/2019/03/04/python-qrcode/bilihilib.gif" width="20%" height="20%"></p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myqr https://www.bilihili.com -p bilihili.jpg</span><br></pre></td></tr></table></figure>
-<p> 参数 -p 用来将QR二维码图像与一张同目录下的图片相结合，产生一张黑白图片。<br> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myqr https://www.bilihili.com -p bilihili.jpg -c</span><br></pre></td></tr></table></figure></p>
-<p>加上参数 -c 可以使产生的图片由黑白变为彩色的。</p>
-<h3 id="生成动图的注意事项"><a href="#生成动图的注意事项" class="headerlink" title="生成动图的注意事项"></a>生成动图的注意事项</h3><p>生成动图的方式和普通的生成二维码方式一样，但名字必须保持 .gif 格式。</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
-<li>最好采用正方形图片</li>
-</ol>
-<h3 id="可用字符"><a href="#可用字符" class="headerlink" title="可用字符"></a>可用字符</h3><ol>
-<li>0-9</li>
-<li>大小写英文字母</li>
-<li>常用英文标点和空格<br>· , . : ; + - * / \ ~ ! @ # $ % ^ &amp; ` ‘ = &lt; &gt; [ ] ( ) ? _ { } | and  (space)</li>
-</ol>
-<h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><p>Linux, Python 3<br>Windows, Python 3<br>Mac, Python 3<br>该项目为开源项目 github 地址为 <a href="https://github.com/sylnsfar/qrcode" target="_blank" rel="noopener">https://github.com/sylnsfar/qrcode</a></p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/02/18/website-design/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/website-design/" class="post-title-link" itemprop="url">网站开发</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-18 18:42:08 / Modified: 19:52:58" itemprop="dateCreated datePublished" datetime="2019-02-18T18:42:08+08:00">2019-02-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mywebsite/" itemprop="url" rel="index"><span itemprop="name">mywebsite</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/18/website-design/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/18/website-design/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="如何同步代码"><a href="#如何同步代码" class="headerlink" title="如何同步代码"></a>如何同步代码</h3><p>感觉用ftp传输不太现实，所以我现在的办法是用 git 同步代码，现在 GitHub 可能是被微软收购的原因，允许非付费用户使用 private 仓库，这样对我也是特别方便，但是我对 Git 还不是特别熟悉，所以遇到了一些问题。<br>因为项目使用的是 django 所以数据库暂时用 sqlite3 ,因为数据库在开发时和网站上都可能被修改，所以我打算设置 git 的忽略文件。<br><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">.idea</span><br><span class="line">__pycache__</span><br><span class="line">db.sqlite3</span><br><span class="line">media<span class="regexp">/avatar/</span>*</span><br><span class="line">!media<span class="regexp">/avatar/</span>avatar.png</span><br><span class="line">media<span class="regexp">/images/</span>*</span><br><span class="line">media<span class="regexp">/temp/</span>*</span><br></pre></td></tr></table></figure></p>
-<p>需要保存默认的avatar以及migrations文件,其他图片不保存，顺便吐槽一下千牛，他的存储方案需要备案的域名。亚马逊的aws s3可以不用，但是昨天试了一试发现不能上传文件，而且告知我没有修改它的权限，可能是我不会设置的原因。<br>接下来是 Git 的原因，当我在服务器是pull时他告知我，我修改了服务器上的文件，需要我自己手动 merge，merge 是不可能 merge 的，所以我用了这个命令。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error: Your <span class="built_in">local</span> changes to the following files would be overwritten by merge:</span><br><span class="line">        home/templates/home/moments.html</span><br><span class="line">        user/templates/user/user.html</span><br><span class="line">        user/views.py</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line"></span><br><span class="line">$ git reset --hard</span><br></pre></td></tr></table></figure></p>
-<p>因为不存在文件丢失的问题，所以我就不 stash them 了。</p>
-<h3 id="图片如何保存"><a href="#图片如何保存" class="headerlink" title="图片如何保存"></a>图片如何保存</h3><p>听说instagram使用的也是 aws s3 的方案。但是目前我还是存储在服务器上，大不了崩了重新搭建一次。</p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -931,7 +926,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -966,7 +961,9 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>

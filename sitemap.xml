@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fify.me/2019/07/17/gcc-in-windows/</loc>
+    
+    <lastmod>2019-07-17T10:30:39.640Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fify.me/2019/07/09/K2-netkeeper-openwrt/</loc>
+    
+    <lastmod>2019-07-17T10:26:53.151Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fify.me/2019/06/25/nginx-cookbook-1/</loc>
     
-    <lastmod>2019-06-25T07:54:14.566Z</lastmod>
+    <lastmod>2019-07-09T12:31:16.084Z</lastmod>
     
   </url>
   
