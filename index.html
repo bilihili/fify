@@ -334,6 +334,189 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/08/01/rails-in-windows-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/01/rails-in-windows-10/" class="post-title-link" itemprop="url">在 Windows 10 上搭建 Rails 环境</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-01 22:38:46 / Modified: 22:48:29" itemprop="dateCreated datePublished" datetime="2019-08-01T22:38:46+08:00">2019-08-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/08/01/rails-in-windows-10/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/01/rails-in-windows-10/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="安装-Ruby"><a href="#安装-Ruby" class="headerlink" title="安装 Ruby"></a>安装 Ruby</h3><p>安装 Ruby 很简单， 下载 RubyInstaller <a href="https://rubyinstaller.org/" target="_blank" rel="noopener">https://rubyinstaller.org/</a></p>
+<h3 id="安装-Rails"><a href="#安装-Rails" class="headerlink" title="安装 Rails"></a>安装 Rails</h3><p>安装 rails 很简单， 但是由于国内限速，需要用镜像源</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">gem sources --<span class="built_in">add</span> http<span class="variable">s:</span>//gems.<span class="keyword">ruby</span>-china.<span class="keyword">com</span>/ --<span class="built_in">remove</span> http<span class="variable">s:</span>//rubygems.org/</span><br><span class="line">gem sources -<span class="keyword">l</span></span><br><span class="line"># 确保只有 gems.<span class="keyword">ruby</span>-china.<span class="keyword">com</span></span><br></pre></td></tr></table></figure>
+<p>再更改一下 bundler 的镜像源<br><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">bundle config mirror.http<span class="variable">s:</span>//rubygems.org http<span class="variable">s:</span>//gems.<span class="keyword">ruby</span>-china.<span class="keyword">com</span></span><br></pre></td></tr></table></figure></p>
+<p>如果遇到安装 sqlite3 的问题，按照提示，安装即可<br><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gem</span> install sqlite3 <span class="string">'1.41'</span> <span class="comment"># 可能不是这样安装的</span></span><br></pre></td></tr></table></figure></p>
+<p>新建 rails 项目<br><figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">rails <span class="keyword">new</span> <span class="type">genius</span></span><br><span class="line"><span class="type">bundle</span> install</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/07/17/gcc-in-windows/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -691,217 +874,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/06/25/nginx-cookbook-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/25/nginx-cookbook-1/" class="post-title-link" itemprop="url">1.Nginx 入门</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-25 15:17:39" itemprop="dateCreated datePublished" datetime="2019-06-25T15:17:39+08:00">2019-06-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-07-09 20:31:16" itemprop="dateModified" datetime="2019-07-09T20:31:16+08:00">2019-07-09</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nginx/" itemprop="url" rel="index"><span itemprop="name">nginx</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/06/25/nginx-cookbook-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/25/nginx-cookbook-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 nginx</h2><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
-<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nginx -v</span><br><span class="line">nginx version: nginx/1.15.3</span><br></pre></td></tr></table></figure>
-<p>你可以输入下面命令验证 nginx 是否运行<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ps -ef | grep nginx</span><br><span class="line">root 1738 1 0 19:54 ? 00:00:00 nginx: master process</span><br><span class="line">nginx 1739 1738 0 19:54 ? 00:00:00 nginx: worker process</span><br></pre></td></tr></table></figure></p>
-<p>验证 nginx 是否返回正确请求，可以使用 curl<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl localhost</span><br></pre></td></tr></table></figure></p>
-<p>或者去浏览器访问 127.0.0.1</p>
-<h3 id="关于-nginx-的文件结构"><a href="#关于-nginx-的文件结构" class="headerlink" title="关于 nginx 的文件结构"></a>关于 nginx 的文件结构</h3><ul>
-<li>/etc/nginx<br>这个是 nginx 的根文件目录</li>
-<li>/etc/nginx/nginx.conf<br>设置 nginx 的全局服务</li>
-<li>/etc/nginx/conf.d/<br>默认的 hhtp 服务器配置文件目录<h3 id="nginx-命令"><a href="#nginx-命令" class="headerlink" title="nginx 命令"></a>nginx 命令</h3></li>
-<li>nginx -h<br>帮助目录</li>
-<li>nginx -v<br>nginx 版本</li>
-<li>nginx -V<br>展示更加详细的 nginx 相关信息</li>
-<li>nginx -t<br>测试 nginx 的配置</li>
-<li>nginx -T<br>测试 nginx 配置文件，并获取相关帮助信息</li>
-<li>nginx - s signal<br>-s 是 send 的缩写 signal 可以用 stop, reload, quit, reopen 代替<br>stop 立即停止 nginx， quit 待相关服务停止后再关闭，reload 代表更新配置文件。</li>
-</ul>
-<h2 id="用-nginx-搭建一个静态文件服务器"><a href="#用-nginx-搭建一个静态文件服务器" class="headerlink" title="用 nginx 搭建一个静态文件服务器"></a>用 nginx 搭建一个静态文件服务器</h2><p>首先删除默认配置<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure></p>
-<p>编辑 /etc/nginx/conf.d/default<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/nginx/conf.d/default</span><br></pre></td></tr></table></figure></p>
-<p>写入下面的文件<br><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line"> <span class="attribute">listen</span> <span class="number">80</span> default_server;</span><br><span class="line"> <span class="attribute">server_name</span> www.example.com;</span><br><span class="line"> <span class="attribute">location</span> / &#123;</span><br><span class="line"> <span class="attribute">root</span> /var/www/html;</span><br><span class="line"> <span class="attribute">index</span> index.html index.htm;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>root 后面的目录代表静态文件目录。你可以在 /var/www/html；添加 index.html</p>
-<p>测试并更新配置文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nginx -t</span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file /etc/nginx/nginx.conf <span class="built_in">test</span> is successful</span><br><span class="line">$ nginx -s reload <span class="comment">#优雅的重启 nginx</span></span><br></pre></td></tr></table></figure></p>
-<p>这样一个静态服务器就搭建成功了</p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -951,7 +923,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
