@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fify.me/2019/09/14/redis-installed-on-windwos-10/</loc>
+    
+    <lastmod>2019-09-14T08:37:57.184Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fify.me/2019/05/17/google-earth/</loc>
+    
+    <lastmod>2019-09-14T08:33:16.328Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fify.me/2019/08/01/rails-in-windows-10/</loc>
     
     <lastmod>2019-08-01T14:48:29.137Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>https://fify.me/2019/05/24/java-string/</loc>
     
     <lastmod>2019-05-24T03:01:05.099Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://fify.me/2019/05/17/google-earth/</loc>
-    
-    <lastmod>2019-05-17T09:03:34.568Z</lastmod>
     
   </url>
   

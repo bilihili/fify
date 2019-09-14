@@ -120,25 +120,25 @@ var _hmt = _hmt || [];
 </script>
 
 
-  <meta name="description" content="Ubuntu 18.04 的官方源太慢了，换成阿里源。cp /etc/apt/sources.list /etc/apt/sources.back vim /etc/apt/sources.list 将文件全部替换为deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://m">
+  <meta name="description" content="Windows 上面安装 redis 可以用 WSLsudo apt updatesudo apt install redis-server 获取 redis 版本redis-server -v 打开 redis 交互界面redis-cli 打开远端服务器上的 redisredis-cli -h ip -p port -a password">
 <meta name="keywords" content="学习 git python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 18.04 更改阿里源">
-<meta property="og:url" content="https://fify.me/2019/04/14/aliyuan/index.html">
+<meta property="og:title" content="在 windwos 10 上安装 redis">
+<meta property="og:url" content="https://fify.me/2019/09/14/redis-installed-on-windwos-10/index.html">
 <meta property="og:site_name" content="浮躁狗">
-<meta property="og:description" content="Ubuntu 18.04 的官方源太慢了，换成阿里源。cp /etc/apt/sources.list /etc/apt/sources.back vim /etc/apt/sources.list 将文件全部替换为deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://m">
+<meta property="og:description" content="Windows 上面安装 redis 可以用 WSLsudo apt updatesudo apt install redis-server 获取 redis 版本redis-server -v 打开 redis 交互界面redis-cli 打开远端服务器上的 redisredis-cli -h ip -p port -a password">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T15:04:11.295Z">
+<meta property="og:updated_time" content="2019-09-14T08:37:57.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu 18.04 更改阿里源">
-<meta name="twitter:description" content="Ubuntu 18.04 的官方源太慢了，换成阿里源。cp /etc/apt/sources.list /etc/apt/sources.back vim /etc/apt/sources.list 将文件全部替换为deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://m">
+<meta name="twitter:title" content="在 windwos 10 上安装 redis">
+<meta name="twitter:description" content="Windows 上面安装 redis 可以用 WSLsudo apt updatesudo apt install redis-server 获取 redis 版本redis-server -v 打开 redis 交互界面redis-cli 打开远端服务器上的 redisredis-cli -h ip -p port -a password">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fify.me/2019/04/14/aliyuan/">
+  <link rel="canonical" href="https://fify.me/2019/09/14/redis-installed-on-windwos-10/">
 
 
 
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-  <title>Ubuntu 18.04 更改阿里源 | 浮躁狗</title>
+  <title>在 windwos 10 上安装 redis | 浮躁狗</title>
   
 
 
@@ -334,7 +334,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/04/14/aliyuan/">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/09/14/redis-installed-on-windwos-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浮躁狗">
@@ -351,7 +351,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h2 class="post-title" itemprop="name headline">Ubuntu 18.04 更改阿里源
+          <h2 class="post-title" itemprop="name headline">在 windwos 10 上安装 redis
 
               
             
@@ -377,7 +377,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="Created: 2019-04-14 23:01:20 / Modified: 23:04:11" itemprop="dateCreated datePublished" datetime="2019-04-14T23:01:20+08:00">2019-04-14</time>
+              <time title="Created: 2019-09-14 16:33:35 / Modified: 16:37:57" itemprop="dateCreated datePublished" datetime="2019-09-14T16:33:35+08:00">2019-09-14</time>
             
 
             
@@ -418,8 +418,8 @@ var _hmt = _hmt || [];
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/04/14/aliyuan/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/14/aliyuan/" itemprop="commentCount"></span>
+                <a href="/2019/09/14/redis-installed-on-windwos-10/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/14/redis-installed-on-windwos-10/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,10 +447,10 @@ var _hmt = _hmt || [];
       
 
       
-        <p>Ubuntu 18.04 的官方源太慢了，换成阿里源。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/apt/sources.list /etc/apt/sources.back</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-<p>将文件全部替换为<br><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-security main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-updates main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></p>
-<p>更新设置<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br></pre></td></tr></table></figure></p>
+        <p>Windows 上面安装 redis 可以用 WSL<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install redis-server</span><br></pre></td></tr></table></figure></p>
+<p>获取 redis 版本<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-server -v</span><br></pre></td></tr></table></figure></p>
+<p>打开 redis 交互界面<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli</span><br></pre></td></tr></table></figure></p>
+<p>打开远端服务器上的 redis<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli -h ip -p port -a password</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -485,8 +485,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/11/mit-License/" rel="next" title="MIT 开源协议">
-                <i class="fa fa-chevron-left"></i> MIT 开源协议
+              <a href="/2019/08/01/rails-in-windows-10/" rel="next" title="在 Windows 10 上搭建 Rails 环境">
+                <i class="fa fa-chevron-left"></i> 在 Windows 10 上搭建 Rails 环境
               </a>
             
           </div>
@@ -494,10 +494,6 @@ var _hmt = _hmt || [];
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/14/leetcode-two-sum/" rel="prev" title="leetcode 第一题 two sum">
-                leetcode 第一题 two sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
