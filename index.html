@@ -334,6 +334,200 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/10/28/ruby-string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮躁狗">
+      <meta itemprop="description" content="记录学习的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮躁狗">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/28/ruby-string/" class="post-title-link" itemprop="url">浮躁狗学 Ruby 字符串</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-28 14:02:34 / Modified: 15:21:16" itemprop="dateCreated datePublished" datetime="2019-10-28T14:02:34+08:00">2019-10-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ruby/" itemprop="url" rel="index"><span itemprop="name">ruby</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/10/28/ruby-string/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/28/ruby-string/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="学习环境"><a href="#学习环境" class="headerlink" title="学习环境"></a>学习环境</h3><p>一般学 ruby, 我在 WSL 上面学习,使用 rvm 以及 ruby 2.6.5.然后在命令行输入 irb, 进行交互式的学习 Ruby.</p>
+<p>学习参照了 Ruby CookBook Edition 2 </p>
+<h3 id="Ruby-String"><a href="#Ruby-String" class="headerlink" title="Ruby String"></a>Ruby String</h3><p>定义 Ruby string 很简单<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string = <span class="string">"This is ruby string"</span></span><br></pre></td></tr></table></figure></p>
+<p>然后就会有类似这样的输出.<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">=&gt; <span class="string">"This is ruby string"</span></span><br></pre></td></tr></table></figure></p>
+<p>Ruby string 有如下的一些方法<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.length  <span class="comment"># =&gt; 19</span></span><br><span class="line"><span class="comment"># ruby也支持很多语言的用法</span></span><br><span class="line">string.length() <span class="comment"># =&gt; 19</span></span><br></pre></td></tr></table></figure></p>
+<p>在 Ruby 中有些时候我们可以省略 ()</p>
+<p>当然这些只是针对无参数的情况,如果有参数的话还是建议大家加上 ( )</p>
+<p>比如下面一个获取字符出现次数的方法<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.count(<span class="string">'i'</span>) <span class="comment"># =&gt; 3</span></span><br><span class="line">string.count <span class="string">'i'</span>   <span class="comment"># =&gt; 3</span></span><br></pre></td></tr></table></figure></p>
+<p>Ruby “” 和 ‘’<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">puts <span class="string">"ruby\nisbest"</span></span><br><span class="line"><span class="comment"># ruby</span></span><br><span class="line"><span class="comment"># isbest</span></span><br><span class="line">puts <span class="string">'ruby\nisbest'</span></span><br><span class="line"><span class="comment"># ruby\nisbest</span></span><br></pre></td></tr></table></figure></p>
+<p>多行输出字符串<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">puts <span class="string">&lt;&lt;EOF</span></span><br><span class="line"><span class="string">This is first line.</span></span><br><span class="line"><span class="string">This is second line.</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></p>
+<p>截取字符串的两种方式</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.slice(<span class="number">2</span>,<span class="number">5</span>)</span><br><span class="line">string[<span class="number">2</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<p>获取单个字符串<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.byteslice(<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
+<p>Ruby 字符串和其他语言不同，它是可变的。<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.upcase</span><br><span class="line">string.upcase!</span><br></pre></td></tr></table></figure></p>
+<p>一般我们在函数后面加 ! 表示我们要修改当前字符串，没有的话就不会修改它。</p>
+<p>这种函数命名的方式符合了 ruby 的哲学.</p>
+<p>函数后面还可以有 ?</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">string.empty? <span class="comment"># =&gt; false</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fify.me/2019/09/14/redis-installed-on-windwos-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -683,192 +877,11 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fify.me/2019/07/17/gcc-in-windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浮躁狗">
-      <meta itemprop="description" content="记录学习的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浮躁狗">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/17/gcc-in-windows/" class="post-title-link" itemprop="url">如何在Windows 命令行下使用gcc</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-07-17 18:27:14 / Modified: 18:30:39" itemprop="dateCreated datePublished" datetime="2019-07-17T18:27:14+08:00">2019-07-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂货/" itemprop="url" rel="index"><span itemprop="name">杂货</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/07/17/gcc-in-windows/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/17/gcc-in-windows/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>下载软件 </p>
-<p><a href="http://tdm-gcc.tdragon.net/download" target="_blank" rel="noopener">TDM-GCC</a></p>
-<p>打开 cmd</p>
-<p>键入 gcc a.c 即可。</p>
-
-          
-        
-      
-    </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2798705563204615" data-ad-slot="2834939685"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -913,7 +926,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -950,7 +963,9 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
